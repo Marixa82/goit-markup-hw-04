@@ -1,0 +1,331 @@
+:root {
+  --color-light: #ffffff;
+  --color-light-bgc: #f4f4fd;
+  --color-main: #2e2f42;
+  --color-bgc: #2e2f42;
+  --color-accent: #4d5ae5;
+  --primary-text-color: #434455;
+  --color-footer: #e7e9fc;
+  --color-bgc-btn: #404bbf;
+  --font-family-main: 'Roboto', sans-serif;
+  --font-size-main: 16px;
+  --line-height-main: 1.5;
+  --letter-spacing-main: 0.02em;
+  --box-shadow-main: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  --border-main: 1px solid #e7e9fc;
+}
+
+body {
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-main);
+  line-height: var(--line-height-main);
+  letter-spacing: var(--letter-spacing-main);
+  color: var(--primary-text-color);
+}
+.list {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  margin: 0;
+  padding-left: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.link {
+  text-decoration: none;
+}
+.container {
+  margin: 0 auto;
+  width: 1158px;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* outline: 2px solid green; */
+}
+
+/* Main */
+
+.container-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+/* Logo */
+.logo {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+.logo-header {
+  color: var(--color-main);
+}
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: var(--border-main);
+  box-shadow: var(--box-shadow-main);
+}
+
+/* .nav-link.current {
+  color: var(--color-accent);
+} */
+
+.nav-list {
+  display: flex;
+  margin-left: 76px;
+}
+.nav-list .nav-item + .nav-item {
+  margin-left: 40px;
+}
+.nav-link {
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-main);
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--color-bgc-btn);
+}
+.address {
+  margin-left: auto;
+}
+.address-list {
+  display: flex;
+}
+.address-list .address-item + .address-item {
+  margin-left: 40px;
+}
+
+.address-item .link {
+  font-style: normal;
+  color: var(--primary-text-color);
+}
+.address-item .link:hover,
+.address-item .link:focus {
+  color: var(--color-bgc-btn);
+}
+
+/* Hero */
+
+.hero {
+  padding-top: 188px;
+  padding-bottom: 188px;
+  padding-bottom: 120px;
+  background-color: var(--color-bgc);
+}
+.hero-container {
+  max-width: 484px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.hero-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  text-align: center;
+  color: var(--color-light);
+  margin-bottom: 48px;
+}
+.button-hero {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: var(--color-light);
+  background-color: var(--color-accent);
+  cursor: pointer;
+  padding: 16px 32px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.button-hero:hover,
+.button-hero:focus {
+  background-color: var(--color-bgc-btn);
+}
+/* .button-hero:active {
+  background-color: var(--color-bgc-btn);
+} */
+
+/* Feature */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.feature {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+/* .feature-container {
+  flex-basis: calc((100%- (24px * 3)) / 4);
+} */
+
+.feature-list {
+  display: flex;
+  gap: 24px;
+}
+.feature-item {
+  flex-basis: calc((100% - 3 * 24px) / 4);
+  /* max-width: 264px; */
+}
+.feature-after-title,
+.team-after-title,
+.projects-title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  margin-bottom: 8px;
+  color: var(--color-main);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--color-main);
+}
+
+/* What are we doing */
+
+.works {
+  padding-bottom: 120px;
+}
+.works-list {
+  display: flex;
+  gap: 24px;
+}
+.works-item {
+  flex-basis: calc((100% - 2 * 24px) / 3);
+}
+.works-title {
+  margin-bottom: 72px;
+}
+/* Our team */
+.team {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  background-color: var(--color-light-bgc);
+}
+.team-list {
+  display: flex;
+  gap: 24px;
+}
+.team-title {
+  margin-bottom: 72px;
+}
+.team-card {
+  box-shadow: var(--box-shadow-main);
+  border-radius: 0px 0px 4px 4px;
+  flex-basis: calc((100% - 3 * 24px) / 4);
+
+  background-color: var(--color-light);
+}
+.about-team {
+  padding: 32px 16px;
+  text-align: center;
+}
+
+/* Footer */
+
+.footer {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: var(--color-main);
+}
+.footer-container {
+  max-width: 264px;
+}
+.logo-footer {
+  margin-bottom: 16px;
+  color: var(--color-light-bgc);
+}
+.footer-text {
+  margin-top: 16px;
+  color: var(--color-footer);
+}
+/* PORTFOLIO */
+
+/* GALLERY */
+
+.button {
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border: var(--border-main);
+  border-radius: 4px;
+  background-color: var(--color-light-bgc);
+  color: var(--color-accent);
+}
+.button:hover,
+.button:focus {
+  color: var(--color-light);
+  background-color: var(--color-bgc-btn);
+}
+.filters {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
+.filter {
+  margin-bottom: 72px;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+.projects-card {
+  flex-basis: calc((100% - 2 * 24px) / 3);
+  background-color: var(--color-light);
+  border: var(--border-main);
+}
+.projects-about {
+  padding: 32px 16px;
+}
+.projects-text {
+  color: var(--primary-text-color);
+}
