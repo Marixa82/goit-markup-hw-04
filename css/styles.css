@@ -7,12 +7,17 @@
   --primary-text-color: #434455;
   --color-footer: #e7e9fc;
   --color-bgc-btn: #404bbf;
+  --color-bgc-footer: #31d0aa;
+  --color-icons: #8e8f99;
+  --color-bgc-soc: rgba(255, 255, 255, 0.1);
   --font-family-main: 'Roboto', sans-serif;
   --font-size-main: 16px;
   --line-height-main: 1.5;
   --letter-spacing-main: 0.02em;
   --box-shadow-main: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  --box-shadow-btn: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   --border-main: 1px solid #e7e9fc;
 }
 
@@ -126,10 +131,20 @@ img {
 /* Hero */
 
 .hero {
+  margin: auto;
+  max-width: 1440px;
+  height: 600px;
   padding-top: 188px;
   padding-bottom: 188px;
-  padding-bottom: 120px;
-  background-color: var(--color-bgc);
+  background-color: var(--color-main);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url('../images/people-office.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero-container {
   max-width: 484px;
@@ -201,6 +216,19 @@ img {
   flex-basis: calc((100% - 3 * 24px) / 4);
   /* max-width: 264px; */
 }
+.feature-decor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 112px;
+  background: var(--color-light-bgc);
+  border-radius: 4px;
+}
+
+.feature-icon {
+  width: 64px;
+  height: 64px;
+}
 .feature-after-title,
 .team-after-title,
 .projects-title {
@@ -235,6 +263,7 @@ img {
 .works-title {
   margin-bottom: 72px;
 }
+
 /* Our team */
 .team {
   padding-top: 120px;
@@ -244,6 +273,7 @@ img {
 }
 .team-list {
   display: flex;
+  justify-content: center;
   gap: 24px;
 }
 .team-title {
@@ -260,6 +290,68 @@ img {
   padding: 32px 16px;
   text-align: center;
 }
+.team-text {
+  margin-bottom: 8px;
+}
+.team-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.team-soc-icon {
+  width: 40px;
+  height: 40px;
+}
+.team-soc-link {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-soc-link:is(:hover, :focus) {
+  background-color: var(--color-bgc-btn);
+}
+/* Customers */
+.customers {
+  padding-top: 128px;
+  padding-bottom: 122px;
+}
+
+.customers-title {
+  padding-bottom: 72px;
+}
+
+.customers-list {
+  display: flex;
+  gap: 24px;
+}
+
+.customers-item {
+  width: calc((100% - 5 * 24px) / 6);
+  height: 88px;
+}
+.customers-link {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-icons);
+}
+.customers-icon {
+  fill: currentColor;
+}
+.customers-link:is(:hover, :focus) .customers-icon {
+  color: var(--color-bgc-btn);
+}
+.customers-link:is(:hover, :focus) {
+  border-color: var(--color-bgc-btn);
+}
 
 /* Footer */
 
@@ -267,6 +359,10 @@ img {
   padding-top: 100px;
   padding-bottom: 100px;
   background-color: var(--color-main);
+}
+.footer > .container {
+  display: flex;
+  gap: 120px;
 }
 .footer-container {
   max-width: 264px;
@@ -279,6 +375,38 @@ img {
   margin-top: 16px;
   color: var(--color-footer);
 }
+.footer-soc {
+  max-width: 208px;
+}
+.footer-soc-title {
+  font-weight: 500;
+  margin-bottom: 16px;
+
+  color: var(--color-light);
+}
+
+.footer-soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.footer-soc-item {
+  width: 40px;
+  height: 40px;
+}
+.footer-soc-link:is(:hover, :focus) {
+  background-color: var(--color-bgc-footer);
+}
+.footer-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  background-color: var(--color-bgc-soc);
+}
+
 /* PORTFOLIO */
 
 /* GALLERY */
@@ -302,6 +430,8 @@ img {
 .button:focus {
   color: var(--color-light);
   background-color: var(--color-bgc-btn);
+  box-shadow: var(--box-shadow-btn);
+  border-color: var(--color-bgc-btn);
 }
 .filters {
   padding-top: 96px;
@@ -322,6 +452,13 @@ img {
   flex-basis: calc((100% - 2 * 24px) / 3);
   background-color: var(--color-light);
   border: var(--border-main);
+}
+.projects-card-link {
+  display: block;
+}
+.projects-card-link:is(:hover, :focus) {
+  border: 0.5px solid #f4f4fd;
+  box-shadow: var(--box-shadow-main);
 }
 .projects-about {
   padding: 32px 16px;
