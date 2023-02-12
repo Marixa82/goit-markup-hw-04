@@ -225,6 +225,7 @@ img {
   height: 112px;
   background: var(--color-light-bgc);
   border-radius: 4px;
+  margin-bottom: 8px;
 }
 
 .feature-icon {
@@ -452,14 +453,14 @@ img {
 }
 .projects-card {
   flex-basis: calc((100% - 2 * 24px) / 3);
-  background-color: var(--color-light);
-  border: var(--border-main);
 }
 .projects-card-link {
   display: block;
+  background-color: var(--color-light);
+  border: var(--border-main);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .projects-card-link:is(:hover, :focus) {
-  border: 0.5px solid #f4f4fd;
   box-shadow: var(--box-shadow-main);
 }
 .projects-about {
